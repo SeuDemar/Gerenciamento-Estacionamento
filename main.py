@@ -1,3 +1,7 @@
+# Nomes....: Vitor Boer, João Duarte, Guilherme, Natan Augusto
+# Data.....: 13/05/2025
+# Descricao: Sistema de gerenciamento de estacionamento
+
 from parking_manager import ParkingManager
 
 def main():

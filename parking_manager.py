@@ -5,13 +5,12 @@ class ParkingManager:
         self.parked_cars = self.carregar_exemplos()
 
     def carregar_exemplos(self):
-        # Dados simulando JSON embutido
+        
         dados_json = {
             "ABC1234": "2025-05-12T08:30:00",
             "XYZ5678": "2025-05-12T09:45:00"
         }
 
-        # Converte strings para objetos datetime
         return {
             placa: datetime.datetime.fromisoformat(hora)
             for placa, hora in dados_json.items()
@@ -48,7 +47,7 @@ class ParkingManager:
     def calcular_valor(self, minutos):
         if minutos <= 120:
             return 0.00
-        horas_extras = (minutos - 120 + 59) // 60  # arredonda para cima
+        horas_extras = (minutos - 120 + 59) // 60  
         return round(horas_extras * 2.00, 2)
 
     def list_cars(self):
